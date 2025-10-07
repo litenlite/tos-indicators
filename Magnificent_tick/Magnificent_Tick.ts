@@ -41,27 +41,17 @@ MAG7MA.SetDefaultColor(CreateColor(255,215,0));
 MAG7MA.SetLineWeight(2);
 
 # ----------------------
-# Reference Lines (0, 33%, 66%)
+# Reference Line (0 only)
 # ----------------------
 plot zeroLine = 0;
 zeroLine.SetDefaultColor(Color.GRAY);
 zeroLine.SetStyle(Curve.SHORT_DASH);
 
-plot line33 = 2;   # ~33% of max 7
-line33.SetDefaultColor(CreateColor(0,128,0));
-line33.SetStyle(Curve.SHORT_DASH);
-
-plot line66 = 5;   # ~66% of max 7
-line66.SetDefaultColor(CreateColor(0,200,0));
-line66.SetStyle(Curve.SHORT_DASH);
-
-plot neg33 = -2;
-neg33.SetDefaultColor(CreateColor(128,0,0));
-neg33.SetStyle(Curve.SHORT_DASH);
-
-plot neg66 = -5;
-neg66.SetDefaultColor(CreateColor(200,0,0));
-neg66.SetStyle(Curve.SHORT_DASH);
+# ----------------------
+# Visual Markers for Extreme Readings (closed bars only)
+# ----------------------
+# Dots removed - ThinkScript POINTS strategy doesn't center properly
+# Rely on color coding and clouds to show extreme readings
 
 # ----------------------
 # Clouds for extremes
