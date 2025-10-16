@@ -71,9 +71,14 @@ AddCloud(
 );
 
 # ----------------------
-# Label
+# Labels
 # ----------------------
 AddLabel(yes, "MAG7 Tick: " + magTick,
          if magTick>0 then CreateColor(0,255,0)
          else if magTick<0 then CreateColor(255,0,0)
+         else Color.GRAY);
+
+AddLabel(yes, "MA(" + length + "): " + Round(MAG7MA, 2),
+         if MAG7MA>0 then CreateColor(0,200,0)
+         else if MAG7MA<0 then CreateColor(200,0,0)
          else Color.GRAY);

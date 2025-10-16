@@ -50,9 +50,14 @@ minus600.SetStyle(Curve.SHORT_DASH);
 minus1000.SetStyle(Curve.SHORT_DASH);
 
 # ----------------------
-# Label
+# Labels
 # ----------------------
 AddLabel(yes, "$TICK: " + AsText(TICKBar),
          if TICKBar>0 then CreateColor(0,255,0)
          else if TICKBar<0 then CreateColor(255,0,0)
+         else Color.GRAY);
+
+AddLabel(yes, "MA(" + MA_length + "): " + Round(TICK_MA, 0),
+         if TICK_MA>0 then CreateColor(0,200,0)
+         else if TICK_MA<0 then CreateColor(200,0,0)
          else Color.GRAY);
